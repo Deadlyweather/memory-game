@@ -4,22 +4,22 @@ Tehtäväsi on korjata pelissä olevia ongelmia ja parantaa sitä lisäämällä
 
 ## Ongelmat
 
-1. **Korttien kääntämisen logiikka**: Jos pelaaja yrittää kääntää saman kortin kahdesti, se ei pitäisi laskea yritykseksi. Tällä hetkellä koodi ei tarkista tätä tilannetta.
+1. **Korttien kääntämisen estäminen**: Jos kaksi korttia on jo käännetty, pelaajan ei pitäisi pystyä kääntämään lisää kortteja ennen kuin nykyiset kortit on käännetty takaisin tai poistettu pelistä.
 
-2. **Korttien kääntämisen estäminen**: Jos kaksi korttia on jo käännetty, pelaajan ei pitäisi pystyä kääntämään lisää kortteja ennen kuin nykyiset kortit on käännetty takaisin tai poistettu pelistä.
+2. **Pelin uudelleenkäynnistys**: Pelissä ei ole toiminnallisuutta, joka mahdollistaisi pelin uudelleenkäynnistyksen ilman sivun uudelleenlatausta.
 
-3. **Pelin uudelleenkäynnistys**: Pelissä ei ole toiminnallisuutta, joka mahdollistaisi pelin uudelleenkäynnistyksen ilman sivun uudelleenlatausta.
+3. **Korttien satunnainen järjestys**: Korttien järjestys ei välttämättä ole tarpeeksi satunnainen, mikä voi tehdä pelistä ennakoitavan.
 
-4. **Korttien satunnainen järjestys**: Korttien järjestys ei välttämättä ole tarpeeksi satunnainen, mikä voi tehdä pelistä ennakoitavan.
+4. **Visuaaliset ja käytettävyysongelmat**: Korttien ulkoasu ja pelilaudan asettelu eivät välttämättä ole optimaalisia kaikenkokoisilla näytöillä.
 
-5. **Visuaaliset ja käytettävyysongelmat**: Korttien ulkoasu ja pelilaudan asettelu eivät välttämättä ole optimaalisia kaikenkokoisilla näytöillä.
-
-6. **Pelin lopetuksen logiikka**: Pelin lopetuksen logiikka ei välttämättä toimi oikein kaikissa tilanteissa, esimerkiksi jos pelaaja kääntää viimeiset kaksi korttia nopeasti peräkkäin.
+5. **Pelin lopetuksen logiikka**: Pelin lopetuksen logiikka ei välttämättä toimi oikein kaikissa tilanteissa, esimerkiksi jos pelaaja kääntää viimeiset kaksi korttia nopeasti peräkkäin.
 
 
 ## Parannusehdotukset
 
 Opiskelijat voivat tehdä seuraavia parannuksia peliin:
+
+1. **Tee laskuri, joka laskee pelaajan yritykset**: Nyt missään ei näy, miten monta yritystä pelaaja tarvitsee pelin ratkaisemiseksi. Tee laskuri, joka näyttää koko ajan yritysten määrän.
 
 1. **Tee tyylikkäämpi tapa valita pelin korttien määrä**: Nyt pelin korttien määrä annetaan promptilla, mutta voit tehdä siihen esimerkiksi valikkovalinnan.
 
