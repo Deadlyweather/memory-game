@@ -1,30 +1,75 @@
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     margin: 0;
+    height: 100vh;            /* täyttää koko ikkunan korkeuden */
+    display: flex;
+    flex-direction: column;    /* pinoutuu pystysuoraan */
+    justify-content: center;   /* keskitys pystysuunnassa */
+    align-items: center;       /* keskitys vaakasuunnassa */
 }
 
 #game-board {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-gap: 10px;
+    gap: 0.8rem;
+    justify-content: center;   /* gridin sisältö keskelle */
+    width: fit-content;
+    overflow-y: auto;
 }
 
 .card {
-    width: 100px;
-    height: 100px;
+    width: 4vw;
+    height: 4vw;
     background-color: #ccc;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: clamp(1rem, 2vw, 2rem);
     cursor: pointer;
 }
 
 .card.flipped {
     background-color: #fff;
 }
+
+#debug-table {
+    position: fixed;
+    top: 1vh;
+    right: 1vw;
+    background: #ffffffcc;
+    padding: 1vw;
+    border-radius: 6px;
+    font-family: monospace;
+    border: 0.1vw solid #aaa;
+    font-size: clamp(0.6rem, 0.6vw, 1.25rem);
+    max-width: 90%;
+}
+
+#debug-table td, #debug-table th {
+    padding: clamp(2px, 0.5vw, 4px) clamp(4px, 1vw, 8px);
+    overflow-y: auto;
+}
+
+#Stats, input {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Stats {
+    position: fixed;
+    top: 20vh;
+    left: 20vw;
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+}
+
+h1, span, pre, input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    font-size: clamp(0.6rem, 0.6vw, 1.25rem);
+}
+

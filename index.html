@@ -9,6 +9,26 @@
 <body>
     <h1>Muistipeli</h1>
     <div id="game-board"></div>
+    <input type="number" id="Korttien_Määrä" value="0">
+    <input type="button" id="aloitaPeli" value="AloitaPeli">
+    <div id="Stats">
+        <span>Yritykset: </span>
+        <span id="Yritykset">1</span><br>
+        <span>Voitot: </span>
+        <span id="Voitot">0</span>
+    </div>
+    <div id="Voitto_Näyttö" hidden>
+        <span id="Voitto_Yritys">1</span>
+    </div>
+    <table id="debug-table">
+    <tr><th colspan="2">Pelin tila</th></tr>
+    <tr><td>firstCard</td><td id="debug-first"></td></tr>
+    <tr><td>secondCard</td><td id="debug-second"></td></tr>
+    <tr><td>lockBoard</td><td id="debug-lock"></td></tr>
+    <tr><td>Flipped</td><td id="debug-flipped"></td></tr>
+    <tr><td>Matched</td><td id="debug-matched"></td></tr>
+    <pre id="debug-cards"></pre>
+    </table>
     <script type="module" src="./js/game.js"></script>
 </body>
 </html>
