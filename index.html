@@ -10,15 +10,28 @@
     <h1>Muistipeli</h1>
     <div id="game-board"></div>
     <input type="number" id="Korttien_Määrä" value="0">
-    <input type="button" id="aloitaPeli" value="AloitaPeli">
+    <input type="button" id="aloitaPeli" value="AloitaPeli" onclick="Timer()">
     <div id="Stats">
         <span>Yritykset: </span>
         <span id="Yritykset">1</span><br>
         <span>Voitot: </span>
-        <span id="Voitot">0</span>
+        <span id="Voitot">0</span><br>
+        <span>Aika: </span>
+        <span id="Aika">0</span><br>
+        <span>Pisteet: </span>
+        <span id="Pisteet">0</span>
     </div>
     <div id="Voitto_Näyttö" hidden>
-        <span id="Voitto_Yritys">1</span>
+        <span>Voittava yritys: </span>
+        <span id="Voitto_Yritys">1</span><br>
+        <span>Aika: </span>
+        <span id="Loppu_Aika">0</span><br>
+        <span>Pisteet: </span>
+        <span id="Loppu_Pisteet">0</span>
+    </div>
+    <div id="teema-valitsin">
+        <button id="btn-fruits">Fruits</button>
+        <button id="btn-fantasy">Fantasy</button>
     </div>
     <table id="debug-table">
     <tr><th colspan="2">Pelin tila</th></tr>

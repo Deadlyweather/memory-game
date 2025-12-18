@@ -1,17 +1,21 @@
+* {
+    user-select: none;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    height: 100vh;            /* täyttää koko ikkunan korkeuden */
+    height: 100vh;
     display: flex;
-    flex-direction: column;    /* pinoutuu pystysuoraan */
-    justify-content: center;   /* keskitys pystysuunnassa */
-    align-items: center;       /* keskitys vaakasuunnassa */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #game-board {
     display: grid;
     gap: 0.8rem;
-    justify-content: center;   /* gridin sisältö keskelle */
+    justify-content: center;
     width: fit-content;
     overflow-y: auto;
 }
@@ -23,53 +27,74 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: clamp(1rem, 2vw, 2rem);
+    font-size: 2vw;
     cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
 }
 
 .card.flipped {
     background-color: #fff;
 }
 
-#debug-table {
-    position: fixed;
-    top: 1vh;
-    right: 1vw;
-    background: #ffffffcc;
-    padding: 1vw;
-    border-radius: 6px;
-    font-family: monospace;
-    border: 0.1vw solid #aaa;
-    font-size: clamp(0.6rem, 0.6vw, 1.25rem);
-    max-width: 90%;
-}
-
-#debug-table td, #debug-table th {
-    padding: clamp(2px, 0.5vw, 4px) clamp(4px, 1vw, 8px);
+#debug-cards {
+    display: block;
+    max-height: 8vh;
     overflow-y: auto;
+    overflow-x: hidden;
+    white-space: pre;
+    font-size: clamp(0.5rem, 0.55vw, 0.9rem);
 }
 
-#Stats, input {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#debug-table pre,
+#debug-table td {
+    white-space: nowrap;
+}
+
+.debug-current {
+    color: #00ff00;
+    font-weight: bold;
+}
+
+.debug-matched {
+    color: #6e6e6e;
+}
+
+.debug-hidden {
+    color: #000000;
 }
 
 #Stats {
     position: fixed;
     top: 20vh;
     left: 20vw;
-    font-size: clamp(1.2rem, 4vw, 2.5rem);
 }
 
-h1, span, pre, input {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    font-size: clamp(0.6rem, 0.6vw, 1.25rem);
+#Stats span{
+    display: inline-block;
+    flex: none
 }
 
+#Voitto_Näyttö {
+    position: fixed;
+    inset: 0;
+    text-shadow: 0vw 0vw 1vw rgb(0, 255, 0);
+    font-size: 6vw;
+    color: white;
+    background-image: url(../Win.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    line-height: 1;
+    z-index: 9999;
+}
+
+#Voitto_Näyttö span{
+    display: inline-block;
+    flex: none
+}

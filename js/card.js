@@ -1,7 +1,6 @@
-export function createCardElement(card) {
+export function createCardElement(cardHTML) {
     const cardElement = document.createElement('div');
     cardElement.classList.add('card');
-    cardElement.dataset.card = card;
     return cardElement;
 }
 
